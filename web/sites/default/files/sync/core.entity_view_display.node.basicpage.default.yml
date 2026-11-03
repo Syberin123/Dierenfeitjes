@@ -1,0 +1,27 @@
+uuid: 7f97478b-caf3-4771-b13d-bb9c8e26efeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basicpage.field_body
+    - node.type.basicpage
+  module:
+    - user
+id: node.basicpage.default
+targetEntityType: node
+bundle: basicpage
+mode: default
+content:
+  field_body:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

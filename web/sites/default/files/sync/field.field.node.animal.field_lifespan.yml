@@ -1,0 +1,19 @@
+uuid: b520aaed-6ec8-4edb-b980-daa4ad77418f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lifespan
+    - node.type.animal
+id: node.animal.field_lifespan
+field_name: field_lifespan
+entity_type: node
+bundle: animal
+label: Levensverwachting
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
