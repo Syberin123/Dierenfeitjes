@@ -1,17 +1,16 @@
-uuid: 5f88d477-22b8-4a15-a7bc-6378165a3dc3
+uuid: 59a8c7ea-3ba1-492b-990d-9da3339351a7
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_type_of_animal
-field_name: field_type_of_animal
+    - taxonomy
+id: node.field_soort_dier
+field_name: field_soort_dier
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

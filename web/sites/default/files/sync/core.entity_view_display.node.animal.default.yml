@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_scientific_name
     - field.field.node.animal.field_size
-    - field.field.node.animal.field_type_of_animal
+    - field.field.node.animal.field_soort_dier
     - field.field.node.animal.field_weight
     - node.type.animal
   module:
@@ -56,12 +56,11 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_type_of_animal:
-    type: string
+  field_soort_dier:
+    type: entity_reference_label
     label: above
     settings:
-      link_to_entity: false
-      link_rel: canonical
+      link: true
     third_party_settings: {  }
     weight: 2
     region: content

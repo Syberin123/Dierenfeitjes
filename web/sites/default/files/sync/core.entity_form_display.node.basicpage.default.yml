@@ -7,6 +7,7 @@ dependencies:
     - node.type.basicpage
   module:
     - path
+    - text
 id: node.basicpage.default
 targetEntityType: node
 bundle: basicpage
@@ -19,12 +20,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_body:
-    type: string_textarea
+    type: text_textarea_with_summary
     weight: 121
     region: content
     settings:
-      rows: 5
+      rows: 9
+      summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   path:
     type: path

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.basicpage.field_body
     - node.type.basicpage
   module:
+    - text
     - user
 id: node.basicpage.default
 targetEntityType: node
@@ -13,8 +14,8 @@ bundle: basicpage
 mode: default
 content:
   field_body:
-    type: basic_string
-    label: above
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 101

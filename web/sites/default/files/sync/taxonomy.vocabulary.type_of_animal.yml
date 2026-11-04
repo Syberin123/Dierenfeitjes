@@ -1,0 +1,9 @@
+uuid: 56b4194c-82a7-45f1-90a6-2529c1c45e7c
+langcode: en
+status: true
+dependencies: {  }
+name: 'soort dier'
+vid: type_of_animal
+description: null
+weight: 0
+new_revision: false

@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_scientific_name
     - field.field.node.animal.field_size
-    - field.field.node.animal.field_type_of_animal
+    - field.field.node.animal.field_soort_dier
     - field.field.node.animal.field_weight
     - image.style.thumbnail
     - node.type.animal
@@ -57,11 +57,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_type_of_animal:
-    type: string_textfield
-    weight: 3
+  field_soort_dier:
+    type: entity_reference_autocomplete
+    weight: 26
     region: content
     settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
