@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.animal.field_size
     - field.field.node.animal.field_soort_dier
     - field.field.node.animal.field_weight
+    - image.style.featured_animals_image_style
     - node.type.animal
   module:
     - image
@@ -28,8 +29,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
+      image_link: content
+      image_style: featured_animals_image_style
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.type_of_animal.field_type_of_animal_image
+    - image.style.featured_animals_image_style
     - taxonomy.vocabulary.type_of_animal
   module:
     - image
@@ -24,8 +25,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
+      image_link: content
+      image_style: featured_animals_image_style
       image_loading:
         attribute: lazy
     third_party_settings: {  }
