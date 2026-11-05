@@ -10,7 +10,7 @@ field_name: field_weight
 entity_type: node
 bundle: animal
 label: Gewicht
-description: ''
+description: '(in gram of kilogram)'
 required: true
 translatable: false
 default_value: {  }

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.animal.field_animal_image
     - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_quick_fact
     - field.field.node.animal.field_scientific_name
     - field.field.node.animal.field_size
     - field.field.node.animal.field_soort_dier
@@ -14,6 +15,7 @@ dependencies:
   module:
     - image
     - path
+    - text
 id: node.animal.default
 targetEntityType: node
 bundle: animal
@@ -41,6 +43,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_quick_fact:
+    type: text_textarea_with_summary
+    weight: 27
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   field_scientific_name:
     type: string_textfield
     weight: 1
@@ -58,14 +70,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_soort_dier:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 26
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_weight:
     type: string_textfield

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.animal.field_animal_image
     - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_quick_fact
     - field.field.node.animal.field_scientific_name
     - field.field.node.animal.field_size
     - field.field.node.animal.field_soort_dier
@@ -75,4 +76,5 @@ content:
     weight: 5
     region: content
 hidden:
+  field_quick_fact: true
   links: true
