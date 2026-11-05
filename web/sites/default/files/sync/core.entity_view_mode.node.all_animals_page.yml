@@ -1,0 +1,11 @@
+uuid: cbdc6d8e-6d3c-4e81-b7bc-054584f16963
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.all_animals_page
+label: 'All animals page'
+description: null
+targetEntityType: node
+cache: true

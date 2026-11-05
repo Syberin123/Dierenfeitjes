@@ -1,0 +1,47 @@
+uuid: e5c17a32-31f2-4a9d-899e-dff55bb80e81
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.all_animals_page
+    - field.field.node.animal.field_animal_image
+    - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_quick_fact
+    - field.field.node.animal.field_scientific_name
+    - field.field.node.animal.field_size
+    - field.field.node.animal.field_soort_dier
+    - field.field.node.animal.field_weight
+    - image.style.featured_animals_image_style
+    - node.type.animal
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.animal.all_animals_page
+targetEntityType: node
+bundle: animal
+mode: all_animals_page
+content:
+  field_animal_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: featured_animals_image_style
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_lifespan: true
+  field_quick_fact: true
+  field_scientific_name: true
+  field_size: true
+  field_soort_dier: true
+  field_weight: true
+  links: true

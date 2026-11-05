@@ -1,0 +1,15 @@
+uuid: 8d12f193-313e-47ac-8af5-d6217aad4b92
+langcode: en
+status: true
+dependencies: {  }
+name: featured_animals_image_style
+label: 'Featured Animals image 400x300'
+effects:
+  630f2138-725d-4888-81bc-44f03484b130:
+    uuid: 630f2138-725d-4888-81bc-44f03484b130
+    id: image_scale_and_crop
+    weight: -10
+    data:
+      width: 400
+      height: 300
+      anchor: center-center
