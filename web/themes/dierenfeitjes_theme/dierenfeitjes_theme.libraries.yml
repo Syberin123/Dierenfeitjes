@@ -1,0 +1,8 @@
+# Main theme library.
+global:
+  js:
+    js/dierenfeitjes-theme.js: {}
+  css:
+    theme:
+      css/theme/print.css: { media: print }
+      css/dierenfeitjes.css: {}
