@@ -36,7 +36,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_quick_fact:
     type: text_default
@@ -52,7 +52,7 @@ content:
       link_to_entity: false
       link_rel: canonical
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_soort_dier:
     type: entity_reference_label

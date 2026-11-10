@@ -1,3 +1,58 @@
+body {
+  background: none;
+}
 
+.region--content .block {
+  background-color: #f5f5f5;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.featured-animals-block article {
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.featured-animals-block article .node__title {
+  min-height: 2lh;
+}
+.featured-animals-block article img {
+  border-radius: 8px;
+}
+.featured-animals-block article:hover {
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+  border: 1px solid #000000;
+  transition: 0.15s ease-in-out;
+  transition-property: box-shadow, border;
+}
+.featured-animals-block article::after {
+  content: none;
+}
+
+.type-of-animals-block .field--name-name {
+  min-height: 2lh;
+}
+
+.page-wrapper {
+  justify-self: center;
+}
+
+.main-content .main-content__container {
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
+}
 
 /*# sourceMappingURL=dierenfeitjes.css.map */

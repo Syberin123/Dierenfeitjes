@@ -1,4 +1,4 @@
-uuid: bfb7066c-9c83-4ef0-8e85-265489d03521
+uuid: 425f5918-302d-4c97-8584-5f06d16dbd77
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,9 @@ dependencies:
 id: node.field_quick_fact
 field_name: field_quick_fact
 entity_type: node
-type: text_with_summary
-settings: {  }
+type: text
+settings:
+  max_length: 150
 module: text
 locked: false
 cardinality: 1

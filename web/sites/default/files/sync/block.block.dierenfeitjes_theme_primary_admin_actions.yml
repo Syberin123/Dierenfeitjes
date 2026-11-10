@@ -1,0 +1,20 @@
+uuid: 9eb58f66-9b22-4b0d-8651-0ee5b6c2e2e9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dierenfeitjes_theme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: dierenfeitjes_theme_primary_admin_actions
+theme: dierenfeitjes_theme
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

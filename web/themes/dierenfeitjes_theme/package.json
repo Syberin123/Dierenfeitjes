@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "livereload": "livereload --exclusions node_modules/ --exts 'css,js,twig,theme,apng,avif,gif,jpg,jpeg,jfif,pjpeg,pjp,png,svg,webp'",
-    "sass:build": "sass --style=expanded sass/dierenfeitjes.scss css/dierenfeitjes.css",
-    "sass:watch": "sass --watch --style=expanded sass/dierenfeitjes.scss css/dierenfeitjes.css"
+    "sass:build": "sass --style=expanded --quiet sass/dierenfeitjes.scss css/dierenfeitjes.css --verbose",
+    "sass:watch": "sass --watch --style=expanded --quiet sass/dierenfeitjes.scss css/dierenfeitjes.css --verbose"
   },
   "devDependencies": {
     "livereload": "^0.9.3",

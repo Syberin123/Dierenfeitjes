@@ -142,6 +142,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: type-of-animals-block
       header:
         area:
           id: area
