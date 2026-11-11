@@ -1,6 +1,12 @@
 @import "homepage";
 @import "header";
 
+.main-content {
+    margin-inline-end: 0;
+    margin: 0;
+    width: 100%;
+}
+
 .main-content .main-content__container {
     max-width: 1500px;
     margin: 0;

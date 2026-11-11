@@ -69,15 +69,17 @@
               {% endif %}
             </div>
           </div>
-        </div>
       </header>
     {% endif %}
-
+    {% if page.hero %}
+      <div class="homepage-hero">
+        {{ page.hero }}
+      </div>
+    {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper layout-container">
       <div id="main" class="layout-main">
         <div class="main-content">
           <a id="main-content" tabindex="-1"></a>
-          {{ page.hero }}
           <div class="main-content__container container">
             {{ page.highlighted }}
             {{ page.breadcrumb }}

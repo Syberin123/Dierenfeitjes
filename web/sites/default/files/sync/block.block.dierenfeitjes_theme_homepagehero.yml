@@ -1,0 +1,28 @@
+uuid: 73eef2cd-5d58-40a7-bdef-2e6aaf25730d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_block:e4a4ccd7-f06f-478b-8c3b-d8c493bae66e'
+  module:
+    - block_content
+    - system
+  theme:
+    - dierenfeitjes_theme
+id: dierenfeitjes_theme_homepagehero
+theme: dierenfeitjes_theme
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:e4a4ccd7-f06f-478b-8c3b-d8c493bae66e'
+settings:
+  id: 'block_content:e4a4ccd7-f06f-478b-8c3b-d8c493bae66e'
+  label: 'Homepage hero'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
