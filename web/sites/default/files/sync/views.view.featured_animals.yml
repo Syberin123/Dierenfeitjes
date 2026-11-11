@@ -107,24 +107,22 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
-        status:
-          id: status
-          table: node_field_revision
-          field: status
+        random:
+          id: random
+          table: views
+          field: random
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: standard
+          plugin_id: random
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
+            label: Random
+            field_identifier: random
           exposed: false
       arguments: {  }
       filters:
@@ -191,7 +189,7 @@ display:
           tokenize: false
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -206,7 +204,7 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

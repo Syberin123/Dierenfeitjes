@@ -1,4 +1,4 @@
-uuid: 064e107b-b1fa-498c-a600-72b9c6d02631
+uuid: 6c2234cf-babe-423c-b428-a4738b9e3f73
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ field_name: field_scientific_name
 entity_type: node
 type: string
 settings:
-  max_length: 255
+  max_length: 150
   case_sensitive: false
   is_ascii: false
 module: core

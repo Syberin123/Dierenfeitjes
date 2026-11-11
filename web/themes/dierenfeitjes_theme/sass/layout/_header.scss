@@ -1,0 +1,15 @@
+.site-header {
+    max-height: 100px;
+
+    &__inner, &__inner__container {
+        height: 100px;
+        width: 100%;
+        max-width: 100%;
+        background-color: $white;
+        box-shadow: $box-shadow;
+    }
+
+    .header-nav {
+        max-height: 100px;
+    }
+}

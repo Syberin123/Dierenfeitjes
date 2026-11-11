@@ -21,6 +21,15 @@
         &::after {
             content: none;
         }
+
+        .field--name {
+            &-field-scientific-name {
+                height: 150px;
+            }
+            &-field-quick-fact {
+                height: 250px;
+            }
+        }
     }
 }
 
