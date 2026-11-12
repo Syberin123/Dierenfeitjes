@@ -65,3 +65,6 @@
 /drush
 /drupal.phar
 /drupal
+
+# Ignore node dependencies
+node_modules/

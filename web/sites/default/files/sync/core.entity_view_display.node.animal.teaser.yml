@@ -1,0 +1,69 @@
+uuid: 52e1a564-7ddb-4333-9477-1462dea5b82a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.animal.field_animal_image
+    - field.field.node.animal.field_lifespan
+    - field.field.node.animal.field_quick_fact
+    - field.field.node.animal.field_scientific_name
+    - field.field.node.animal.field_size
+    - field.field.node.animal.field_soort_dier
+    - field.field.node.animal.field_weight
+    - image.style.featured_animals_image_style
+    - node.type.animal
+  module:
+    - image
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.animal.teaser
+targetEntityType: node
+bundle: animal
+mode: teaser
+content:
+  field_animal_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: featured_animals_image_style
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_quick_fact:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_scientific_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_soort_dier:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_lifespan: true
+  field_size: true
+  field_weight: true
+  links: true

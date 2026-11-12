@@ -1,0 +1,22 @@
+uuid: 75b6e095-6b22-479a-805f-ef082bd4bacc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dierenfeitjes_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: dierenfeitjes_theme_content
+theme: dierenfeitjes_theme
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

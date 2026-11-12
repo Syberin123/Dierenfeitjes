@@ -1,0 +1,53 @@
+.homepage-hero {
+    height: 300px;
+    background-color: $gray-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.featured-animals-block {
+    article {
+        padding: 0 16px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+
+        .node__title{
+            min-height: 2lh;
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        &:hover {
+            box-shadow: $box-shadow;
+            border: 1px solid $black;
+            transition: 0.15s ease-in-out;
+            transition-property: box-shadow, border;
+        }
+        &::after {
+            content: none;
+        }
+
+        .field--name {
+            &-field-scientific-name {
+                height: 150px;
+            }
+            &-field-quick-fact {
+                height: 250px;
+            }
+        }
+    }
+}
+
+.type-of-animals-block {
+    .field--name-name {
+        min-height: 2lh;
+    }
+
+    img {
+        border-radius: 8px;
+    }
+}
