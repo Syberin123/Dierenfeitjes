@@ -11,8 +11,8 @@ field_name: field_soort_dier
 entity_type: node
 bundle: animal
 label: 'Soort dier'
-description: ''
-required: true
+description: "sometimes when using the api data retrival it doesn't grab a class, if that happends you need to select it manually for the animal of choice"
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

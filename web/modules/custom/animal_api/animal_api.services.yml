@@ -1,0 +1,10 @@
+services:
+  animal_api.service:
+    class: Drupal\animal_api\Service\AnimalApiService
+    arguments: ['@http_client', '@logger.factory']
+  
+  animal_api.retrieve_command:
+    class: Drupal\animal_api\Drush\Commands\RetrieveCommand
+    arguments: ['@logger.channel.default', '@animal_api.service']
+    tags:
+      - { name: drush.command }

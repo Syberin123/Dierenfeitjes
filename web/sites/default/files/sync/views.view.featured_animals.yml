@@ -172,7 +172,20 @@ display:
           query_tags: {  }
       relationships: {  }
       css_class: featured-animals-block
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Uitgelichte dieren</h2>'
+            format: basic_html
+          tokenize: false
       footer:
         area:
           id: area
@@ -184,7 +197,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<a href="/dieren">Zie alle dieren →</a>'
+            value: '<h2><a href="/dieren">Zie alle dieren →</a></h2>'
             format: basic_html
           tokenize: false
       display_extenders: {  }

@@ -69,6 +69,9 @@ a {
 .featured-animals-block article .field--name-field-quick-fact {
   height: 250px;
 }
+.featured-animals-block article .field--name-field-soort-dier a {
+  text-decoration: underline;
+}
 
 .type-of-animals-block .field--name-name {
   min-height: 2lh;
@@ -100,7 +103,7 @@ a {
 }
 
 .main-content .main-content__container {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 0;
   padding: 0;
   justify-self: center;

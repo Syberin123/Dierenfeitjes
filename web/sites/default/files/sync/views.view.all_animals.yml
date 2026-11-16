@@ -82,8 +82,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: '›› Vorige'
+            previous: '‹‹ Volgende'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -287,7 +287,7 @@ display:
         type: grid
         options:
           uses_fields: false
-          columns: 5
+          columns: 4
           automatic_width: true
           alignment: horizontal
           row_class_custom: ''
@@ -308,6 +308,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: all-animals-block
       header: {  }
       footer: {  }
       display_extenders: {  }

@@ -154,7 +154,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<h1>Ontdek de dieren wereld</h1>'
+            value: '<h2>Ontdek de soorten dieren!</h2>'
             format: basic_html
           tokenize: false
       footer: {  }

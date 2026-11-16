@@ -68,3 +68,6 @@
 
 # Ignore node dependencies
 node_modules/
+
+#API keys
+.ddev/.env.web
