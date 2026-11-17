@@ -43,8 +43,22 @@ a {
   object-fit: cover;
 }
 
+@media (max-width: 1023px) {
+  .featured-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  .featured-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.featured-animals-block .views-view-grid__item {
+  display: flex;
+}
 .featured-animals-block article {
-  padding: 0 16px;
+  height: 100%;
+  padding: 0 8px;
   border-radius: 8px;
   border: 1px solid transparent;
 }
@@ -64,17 +78,57 @@ a {
   content: none;
 }
 .featured-animals-block article .field--name-field-scientific-name {
-  height: 150px;
+  min-height: 80px;
 }
 .featured-animals-block article .field--name-field-quick-fact {
-  height: 250px;
+  min-height: 200px;
+}
+.featured-animals-block article .field--name-field-soort-dier {
+  min-height: 80px;
 }
 .featured-animals-block article .field--name-field-soort-dier a {
   text-decoration: underline;
 }
+@media (max-width: 499px) {
+  .featured-animals-block article .field--name-field-scientific-name, .featured-animals-block article .field--name-field-quick-fact, .featured-animals-block article .field--name-field-soort-dier {
+    min-height: 0;
+  }
+}
 
+@media (max-width: 499px) {
+  .type-of-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.type-of-animals-block .views-view-grid__item {
+  position: relative;
+  align-self: end;
+}
 .type-of-animals-block .field--name-name {
-  min-height: 2lh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  min-height: 0;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.type-of-animals-block .field--name-name a {
+  color: inherit;
+}
+.type-of-animals-block .field--name-field-type-of-animal-image {
+  position: relative;
+}
+.type-of-animals-block .field--name-field-type-of-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
 }
 .type-of-animals-block img {
   border-radius: 8px;
