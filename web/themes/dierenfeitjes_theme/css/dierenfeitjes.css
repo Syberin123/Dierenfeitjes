@@ -1,11 +1,11 @@
-body {
-  background: none;
-}
 body .dialog-off-canvas-main-canvas {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   word-wrap: anywhere;
+  background-image: url("../images/animalsbackground.jpg");
+  background-size: auto;
+  background-position: top center;
 }
 
 .region--content .block {
@@ -78,7 +78,7 @@ a {
   content: none;
 }
 .featured-animals-block article .field--name-field-scientific-name {
-  min-height: 80px;
+  min-height: 120px;
 }
 .featured-animals-block article .field--name-field-quick-fact {
   min-height: 200px;
@@ -116,9 +116,6 @@ a {
   text-align: center;
   transform: translate(-50%, -50%);
 }
-.type-of-animals-block .field--name-name a {
-  color: inherit;
-}
 .type-of-animals-block .field--name-field-type-of-animal-image {
   position: relative;
 }
@@ -148,6 +145,76 @@ a {
 }
 .site-header .header-nav {
   max-height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .block-system-main-block .all-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  .block-system-main-block .all-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.block-system-main-block .all-animals-block .views-view-grid__item {
+  position: relative;
+}
+.block-system-main-block .all-animals-block .node__title span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: large;
+}
+.block-system-main-block .all-animals-block .node__content {
+  position: relative;
+  padding: 0;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image {
+  position: relative;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image img {
+  border-radius: 8px;
+}
+
+body.animalpage.insects-arthropods .dialog-off-canvas-main-canvas {
+  background-image: url("../images/insects-arthropods-background.jpg");
+  background-size: auto;
+  background-position: top center;
+}
+body.animalpage.reptiles .dialog-off-canvas-main-canvas {
+  background-image: url("../images/reptiles-background.jpg");
+  background-size: auto;
+  background-position: top center;
+}
+body.animalpage.fish .dialog-off-canvas-main-canvas {
+  background-image: url("../images/fish-background.jpg");
+  background-size: auto;
+  background-position: top center;
+}
+body.animalpage.birds .dialog-off-canvas-main-canvas {
+  background-image: url("../images/birds-background.jpg");
+  background-size: auto;
+  background-position: top center;
+}
+body.animalpage.mammals .dialog-off-canvas-main-canvas {
+  background-image: url("../images/mammals-background.jpg");
+  background-size: auto;
+  background-position: top center;
 }
 
 .main-content {

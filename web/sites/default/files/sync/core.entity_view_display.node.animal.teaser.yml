@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.animal.field_animal_facts
     - field.field.node.animal.field_animal_image
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_quick_fact
@@ -63,6 +64,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_animal_facts: true
   field_lifespan: true
   field_size: true
   field_weight: true

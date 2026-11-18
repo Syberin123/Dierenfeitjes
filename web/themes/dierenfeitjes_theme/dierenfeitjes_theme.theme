@@ -11,7 +11,26 @@ declare(strict_types=1);
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function dierenfeitjes_theme_preprocess_html(array &$variables): void {
+  $path = \Drupal::service('path.current')->getPath();
+  $path = \Drupal::service('path_alias.manager')->getAliasByPath($path);
 
+  if ($path === '/dieren') {
+    $variables['attributes']['class'][] = 'page-animals';
+  }
+  else {
+    $animal_type_classes = [
+      '/amfibieen' => 'animalpage amphibians',
+      '/insecten-geleedpotigen' => 'animalpage insects-arthropods',
+      '/reptielen' => 'animalpage reptiles',
+      '/vissen' => 'animalpage fish',
+      '/vogels' => 'animalpage birds',
+      '/zoogdieren' => 'animalpage mammals',
+    ];
+
+    if (isset($animal_type_classes[$path])) {
+      $variables['attributes']['class'][] = $animal_type_classes[$path];
+    }
+  }
 }
 
 /**

@@ -1,0 +1,21 @@
+uuid: 159b83df-8b7b-4b0b-9346-0f703a600f11
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - dierenfeitjes_theme
+id: dierenfeitjes_theme_searchform
+theme: dierenfeitjes_theme
+region: header
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

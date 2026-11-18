@@ -1,0 +1,14 @@
+
+{% if items %}
+  <div{{ attributes.addClass('animal-facts') }}>
+    {% if not label_hidden %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+
+    <ol class="animal-facts-list">
+      {% for item in items %}
+        {{ item.content|render|replace({'<p>': '<li>', '</p>': '</li>'})|raw }}
+      {% endfor %}
+    </ol>
+  </div>
+{% endif %}

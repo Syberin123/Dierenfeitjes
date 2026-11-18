@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.animal.field_animal_facts
     - field.field.node.animal.field_animal_image
     - field.field.node.animal.field_lifespan
     - field.field.node.animal.field_quick_fact
@@ -14,12 +15,20 @@ dependencies:
     - node.type.animal
   module:
     - image
+    - text
     - user
 id: node.animal.default
 targetEntityType: node
 bundle: animal
 mode: default
 content:
+  field_animal_facts:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_animal_image:
     type: image
     label: hidden

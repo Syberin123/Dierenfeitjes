@@ -2,12 +2,14 @@
 
 
 body {
-    background: none;
 .dialog-off-canvas-main-canvas {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     word-wrap: anywhere;
+    background-image: url($animals-background-image);
+    background-size: auto;
+    background-position: top center;
     }
 }
 

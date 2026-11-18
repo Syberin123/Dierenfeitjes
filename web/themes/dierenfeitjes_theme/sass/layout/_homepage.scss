@@ -50,7 +50,7 @@
 
         .field--name {
             &-field-scientific-name {
-                min-height: 80px;
+                min-height: 120px;
             }
             &-field-quick-fact {
                 min-height: 200px;
@@ -94,10 +94,6 @@
         color: $white;
         text-align: center;
         transform: translate(-50%, -50%);
-
-        a {
-            color: inherit;
-        }
     }
 
     .field--name-field-type-of-animal-image {
