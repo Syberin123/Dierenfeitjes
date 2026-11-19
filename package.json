@@ -1,0 +1,7 @@
+{
+  "name": "dierenfeitjes",
+  "private": true,
+  "scripts": {
+    "build:theme": "npm --prefix web/themes/dierenfeitjes_theme run sass:build"
+  }
+}

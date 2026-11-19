@@ -1,0 +1,53 @@
+.block-system-main-block {
+    .all-animals-block {
+        .views-view-grid--horizontal {
+            @media (max-width: ($breakpoint-xl)) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @media (max-width: ($breakpoint-md - 1px)) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .views-view-grid__item {
+            position: relative;
+        }
+
+        .node__title span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            width: 100%;
+            padding: 8px;
+            color: $white;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            font-size: large;
+        }
+
+        .node__content {
+            position: relative;
+            padding: 0;
+        
+        }
+
+
+        .field--name-field-animal-image {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                inset: 0;
+                content: "";
+                background-color: rgb(0 0 0 / 25%);
+                border-radius: 8px;
+                pointer-events: none;
+            }
+            img {
+                border-radius: 8px;
+            }
+        }
+
+    }
+}

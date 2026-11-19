@@ -1,0 +1,24 @@
+uuid: cde32637-7e64-499e-8f4e-0ae2eff22118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quick_fact
+    - filter.format.plain_text
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_quick_fact
+field_name: field_quick_fact
+entity_type: node
+bundle: animal
+label: 'Snel feitje'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

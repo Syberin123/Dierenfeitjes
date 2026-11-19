@@ -1,0 +1,22 @@
+uuid: 688ee303-67ba-4d72-9ebd-3f90c1f2b497
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - dierenfeitjes_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: dierenfeitjes_theme_powered
+theme: dierenfeitjes_theme
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

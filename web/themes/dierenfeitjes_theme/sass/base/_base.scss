@@ -1,0 +1,81 @@
+@import "variables";
+
+
+body {
+    background-image: url($animals-background-image);
+    background-size: auto;
+    background-position: top center;
+
+    &.animalpage {
+        &.amphibians {
+            background-image: url($amphibians-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+        &.birds {
+            background-image: url($birds-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+        &.fish {
+            background-image: url($fish-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+        &.mammals {
+            background-image: url($mammals-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+        &.reptiles {
+            background-image: url($reptiles-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+        &.insects-arthropods {
+            background-image: url($insects-arthropods-background-image);
+            background-size: cover;
+            background-position: top center;
+        }
+    }
+}
+
+.dialog-off-canvas-main-canvas {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    word-wrap: anywhere;
+}
+
+.region--content {
+    .block {
+        background-color: $gray-light;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: $box-shadow;
+    }
+}
+
+.block-search {
+    display: flex;
+    align-items: center;
+    .search-block-form {
+        display: flex;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}

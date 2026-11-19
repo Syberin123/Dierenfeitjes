@@ -1,0 +1,127 @@
+<?php
+
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Adds the Animal API search button to the title when creating an animal.
+ */
+function animal_api_form_node_animal_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+	if (!$form_state->getFormObject()->getEntity()->isNew() || !isset($form['title']['widget'][0])) {
+		return;
+	}
+
+	$form['#attached']['library'][] = 'animal_api/results_placeholder';
+
+	$form['title']['widget'][0]['animal_api_search'] = [
+		'#type' => 'submit',
+		'#value' => t('Search for animal'),
+		'#suffix' => '<div class="description">' . t('Retrieves data from animal API.
+        Please note that not all information may be available.') . '</div>',
+		'#weight' => 10,
+		'#submit' => [],
+		'#limit_validation_errors' => [],
+		'#ajax' => [
+			'callback' => 'animal_api_search_ajax',
+		],
+		'#attributes' => [
+			'class' => ['animal-api-search-button'],
+			'title' => t('Search for animal'),
+		],
+	];
+
+	$form['title']['widget'][0]['animal_api_results'] = [
+		'#type' => 'container',
+		'#weight' => 11,
+		'#attributes' => [
+			'id' => 'animal-api-results',
+			'class' => ['animal-api-results'],
+			'hidden' => 'hidden',
+		],
+	];
+}
+
+/**
+ * Retrieves and displays animal data in the results container.
+ */
+function animal_api_search_ajax(array &$form, FormStateInterface $form_state): AjaxResponse {
+	$response = new AjaxResponse();
+	$title_value = $form_state->getValue(['title', 0, 'value']);
+	$user_input = $form_state->getUserInput();
+
+	if ($title_value === NULL) {
+		$title_value = $user_input['title'][0]['value']
+			?? $user_input['title']['widget'][0]['value']
+			?? '';
+	}
+
+	$animal_name = trim((string) $title_value);
+
+	if ($animal_name === '') {
+		$response->addCommand(new HtmlCommand('#animal-api-results', '<p>' . t('Enter an animal name first.') . '</p>'));
+		$response->addCommand(new InvokeCommand('#animal-api-results', 'removeAttr', ['hidden']));
+		return $response;
+	}
+
+	$animals = \Drupal::service('animal_api.service')->getAnimalData($animal_name);
+
+	if ($animals === []) {
+		$response->addCommand(new HtmlCommand('#animal-api-results', '<p>' . t('No animal data was found.') . '</p>'));
+		$response->addCommand(new InvokeCommand('#animal-api-results', 'removeAttr', ['hidden']));
+		return $response;
+	}
+
+	$markup = '';
+
+	foreach ($animals as $animal) {
+		if (!is_array($animal)) {
+			continue;
+		}
+
+		$characteristics = $animal['characteristics'] ?? [];
+		$taxonomy = $animal['taxonomy'] ?? [];
+		$fields = [
+			'Name' => $animal['name'] ?? NULL,
+			'Scientific name' => $taxonomy['scientific_name'] ?? NULL,
+			'Class' => $taxonomy['class'] ?? NULL,
+			'Lifespan' => $characteristics['lifespan'] ?? $characteristics['average_lifespan'] ?? NULL,
+			'Size' => $characteristics['length'] ?? $characteristics['height'] ?? NULL,
+			'Weight' => $characteristics['weight'] ?? NULL,
+			'Slogan' => $characteristics['slogan'] ?? NULL,
+		];
+
+		$markup .= '<div class="animal-api-result">';
+		foreach ($fields as $label => $value) {
+			$markup .= '<p><strong>' . Html::escape($label) . ':</strong> ' . Html::escape((string) ($value ?? 'Not available')) . '</p>';
+		}
+
+		$import_data = [
+			'name' => $animal['name'] ?? '',
+			'scientific-name' => $taxonomy['scientific_name'] ?? '',
+			'class' => $taxonomy['class'] ?? '',
+			'lifespan' => $characteristics['lifespan'] ?? $characteristics['average_lifespan'] ?? '',
+			'size' => $characteristics['length'] ?? $characteristics['height'] ?? '',
+			'weight' => $characteristics['weight'] ?? '',
+			'slogan' => $characteristics['slogan'] ?? '',
+		];
+		$import_attributes = '';
+		foreach ($import_data as $attribute => $value) {
+			$import_attributes .= ' data-animal-' . $attribute . '="' . Html::escape((string) $value) . '"';
+		}
+
+		$markup .= '<button type="button" class="button animal-api-import-button"' . $import_attributes . '>' . Html::escape((string) t('Import')) . '</button>';
+		$markup .= '</div>';
+		$markup .= '<hr>';
+	}
+
+	if ($markup === '') {
+		$markup = '<p>' . t('No animal data was found.') . '</p>';
+	}
+
+	$response->addCommand(new HtmlCommand('#animal-api-results', $markup));
+	$response->addCommand(new InvokeCommand('#animal-api-results', 'removeAttr', ['hidden']));
+	return $response;
+}

@@ -1,0 +1,337 @@
+body {
+  background-image: url("../images/animalsbackground.jpg");
+  background-size: auto;
+  background-position: top center;
+}
+body.animalpage.amphibians {
+  background-image: url("../images/amphibians-background.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+body.animalpage.birds {
+  background-image: url("../images/birds-background.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+body.animalpage.fish {
+  background-image: url("../images/fish-background1.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+body.animalpage.mammals {
+  background-image: url("../images/mammals-background1.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+body.animalpage.reptiles {
+  background-image: url("../images/reptiles-background.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+body.animalpage.insects-arthropods {
+  background-image: url("../images/insects-arthropods-background.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.dialog-off-canvas-main-canvas {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  word-wrap: anywhere;
+}
+
+.region--content .block {
+  background-color: #f5f5f5;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+}
+
+.block-search {
+  display: flex;
+  align-items: center;
+}
+.block-search .search-block-form {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.field--name-field-hero-image {
+  margin: 0 0 25px 0;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+}
+.field--name-field-hero-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+  .featured-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  .featured-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.featured-animals-block .views-view-grid__item {
+  display: flex;
+}
+.featured-animals-block article {
+  height: 100%;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.featured-animals-block article .node__title {
+  min-height: 2lh;
+}
+.featured-animals-block article img {
+  border-radius: 8px;
+}
+.featured-animals-block article:hover {
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+  border: 1px solid #000000;
+  transition: 0.15s ease-in-out;
+  transition-property: box-shadow, border;
+}
+.featured-animals-block article::after {
+  content: none;
+}
+.featured-animals-block article .field--name-field-scientific-name {
+  min-height: 120px;
+}
+.featured-animals-block article .field--name-field-quick-fact {
+  min-height: 200px;
+}
+.featured-animals-block article .field--name-field-soort-dier {
+  min-height: 80px;
+}
+.featured-animals-block article .field--name-field-soort-dier a {
+  text-decoration: underline;
+}
+@media (max-width: 499px) {
+  .featured-animals-block article .field--name-field-scientific-name, .featured-animals-block article .field--name-field-quick-fact, .featured-animals-block article .field--name-field-soort-dier {
+    min-height: 0;
+  }
+}
+.featured-animals-block article .view-footer a {
+  text-decoration: underline;
+}
+
+@media (max-width: 499px) {
+  .type-of-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.type-of-animals-block .views-view-grid__item {
+  position: relative;
+  align-self: end;
+}
+.type-of-animals-block .field--name-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  min-height: 0;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.type-of-animals-block .field--name-field-type-of-animal-image {
+  position: relative;
+}
+.type-of-animals-block .field--name-field-type-of-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.type-of-animals-block img {
+  border-radius: 8px;
+}
+
+.site-header {
+  height: 100px;
+  min-height: 100px;
+  border: 0;
+}
+.site-header__inner, .site-header__inner__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(20, 53, 122, 0.06), 0 0 25px 0 rgba(20, 53, 122, 0.2);
+}
+.site-header__inner .mobile-buttons, .site-header__inner__container .mobile-buttons {
+  margin: 0;
+}
+.site-header .header-nav {
+  max-height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .block-system-main-block .all-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  .block-system-main-block .all-animals-block .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.block-system-main-block .all-animals-block .views-view-grid__item {
+  position: relative;
+}
+.block-system-main-block .all-animals-block .node__title span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: large;
+}
+.block-system-main-block .all-animals-block .node__content {
+  position: relative;
+  padding: 0;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image {
+  position: relative;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.block-system-main-block .all-animals-block .field--name-field-animal-image img {
+  border-radius: 8px;
+}
+
+.page-node-type-animal .field--name-field-animal-image {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+}
+.page-node-type-animal .field--name-field-animal-image img {
+  border-radius: 8px;
+}
+.page-node-type-animal .animal-facts li {
+  margin-bottom: 8px;
+}
+
+.animalpage .region--content .block {
+  background-color: #f5f5f5;
+}
+.animalpage .field--name-field-type-of-animal-image {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.animalpage .field--name-field-type-of-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.animalpage .field--name-field-type-of-animal-image img {
+  border-radius: 8px;
+}
+@media (max-width: 1024px) {
+  .animalpage .views-view-grid--horizontal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  .animalpage .views-view-grid--horizontal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.animalpage .views-view-grid__item {
+  position: relative;
+}
+.animalpage .node__title span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 100%;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: large;
+}
+.animalpage .node__content {
+  position: relative;
+  padding: 0;
+}
+.animalpage .field--name-field-animal-image {
+  position: relative;
+}
+.animalpage .field--name-field-animal-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.animalpage .field--name-field-animal-image img {
+  border-radius: 8px;
+}
+.animalpage .feed-icons {
+  display: none;
+}
+
+.main-content {
+  margin-inline-end: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.main-content .main-content__container {
+  max-width: 1800px;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+}
+
+/*# sourceMappingURL=dierenfeitjes.css.map */

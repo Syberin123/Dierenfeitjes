@@ -1,0 +1,8 @@
+results_placeholder:
+  css:
+    component:
+      css/animal_api.results.css: {}
+  js:
+    js/animal_api.results.js: {}
+  dependencies:
+    - core/once

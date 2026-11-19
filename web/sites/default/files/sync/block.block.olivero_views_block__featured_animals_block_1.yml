@@ -1,0 +1,29 @@
+uuid: 920863db-bd2c-47aa-ad41-7b2ea4c11a7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_animals
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__featured_animals_block_1
+theme: olivero
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:featured_animals-block_1'
+settings:
+  id: 'views_block:featured_animals-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
