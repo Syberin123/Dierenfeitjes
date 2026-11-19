@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.all_animals_page
     - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
   module:
@@ -318,13 +319,29 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: all_animals_page
       query:
         type: views_query
         options: {  }
       defaults:
         style: false
         row: false
+        header: false
+      header:
+        entity_taxonomy_term:
+          id: entity_taxonomy_term
+          table: views
+          field: entity_taxonomy_term
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: true
+          target: '{{ raw_arguments.tid }}'
+          view_mode: full
+          tokenize: true
+          bypass_access: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:

@@ -1,15 +1,22 @@
 .site-header {
     height: 100px;
     min-height: 100px;
+    border: 0;
 
     &__inner,
     &__inner__container {
+        display: flex;
+        align-items: center;
         height: 100%;
         min-height: 0;
         width: 100%;
         max-width: 100%;
         background-color: $white;
         box-shadow: $box-shadow;
+
+        .mobile-buttons {
+            margin: 0;
+        }
     }
 
     .header-nav {

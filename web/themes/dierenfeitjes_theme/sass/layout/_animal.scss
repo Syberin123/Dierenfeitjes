@@ -1,37 +1,17 @@
-body {
+.page-node-type-animal {
+        .field--name-field-animal-image {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0;
 
-    &.animalpage.insects-arthropods
-    .dialog-off-canvas-main-canvas {
-        background-image: url($insects-arthropods-background-image);
-        background-size: auto;
-        background-position: top center;
+        img {
+            border-radius: 8px;
+        }
     }
 
-    &.animalpage.reptiles
-    .dialog-off-canvas-main-canvas {
-        background-image: url($reptiles-background-image);
-        background-size: auto;
-        background-position: top center;
-    }
-
-    &.animalpage.fish 
-    .dialog-off-canvas-main-canvas {
-        background-image: url($fish-background-image);
-        background-size: auto;
-        background-position: top center;
-    }
-
-    &.animalpage.birds
-    .dialog-off-canvas-main-canvas {
-        background-image: url($birds-background-image);
-        background-size: auto;
-        background-position: top center;
-    }
-
-    &.animalpage.mammals
-    .dialog-off-canvas-main-canvas {
-        background-image: url($mammals-background-image);
-        background-size: auto;
-        background-position: top center;
+    .animal-facts {
+        li {
+            margin-bottom: 8px;
+        }
     }
 }

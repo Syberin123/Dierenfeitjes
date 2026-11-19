@@ -12,7 +12,7 @@ dependencies:
 id: dierenfeitjes_theme_homepagehero
 theme: dierenfeitjes_theme
 region: hero
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:e4a4ccd7-f06f-478b-8c3b-d8c493bae66e'
 settings:

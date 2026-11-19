@@ -11,7 +11,7 @@ _core:
 id: dierenfeitjes_theme_help
 theme: dierenfeitjes_theme
 region: header
-weight: 0
+weight: -2
 provider: null
 plugin: help_block
 settings:
