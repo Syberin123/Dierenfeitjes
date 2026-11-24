@@ -1,0 +1,23 @@
+.page-node-type-animal {
+    .field--name-field-animal-image {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0;
+
+        img {
+            border-radius: 8px;
+        }
+    }
+
+    .field--name-field-soort-dier{
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .animal-facts {
+        li {
+            margin-bottom: 8px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+uuid: 3f21b2e9-f06c-4485-ba05-f5dbd1b64c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animal_facts
+    - filter.format.basic_html
+    - filter.format.plain_text
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_animal_facts
+field_name: field_animal_facts
+entity_type: node
+bundle: animal
+label: Feitjes
+description: "Vul hier het dier's feitjes in\r\ndit word automatisch omgezet in een genummerde lijst"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - plain_text
+field_type: text_long

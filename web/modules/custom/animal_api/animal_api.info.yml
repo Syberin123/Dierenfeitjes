@@ -1,0 +1,5 @@
+name: Animal API
+type: module
+description: Automatically imports animal information from the animal API when create a animal node
+package: Custom
+core_version_requirement: ^11
