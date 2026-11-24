@@ -329,19 +329,19 @@ display:
         row: false
         header: false
       header:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
+        area:
+          id: area
           table: views
-          field: entity_taxonomy_term
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: entity
-          empty: true
-          target: '{{ raw_arguments.tid }}'
-          view_mode: full
-          tokenize: true
-          bypass_access: false
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>[view:title]</h2>'
+            format: full_html
+          tokenize: false
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:
