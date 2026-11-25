@@ -9,7 +9,7 @@ id: node.animal.field_lifespan
 field_name: field_lifespan
 entity_type: node
 bundle: animal
-label: Levensverwachting
+label: Lifespan
 description: ''
 required: false
 translatable: false

@@ -9,7 +9,7 @@ id: node.animal.field_size
 field_name: field_size
 entity_type: node
 bundle: animal
-label: Grootte
+label: Size
 description: '(in meters, centimeters of millimeters)'
 required: false
 translatable: false

@@ -11,7 +11,7 @@ id: node.animal.field_animal_image
 field_name: field_animal_image
 entity_type: node
 bundle: animal
-label: 'Dier afbeelding'
+label: 'Animal Image'
 description: ''
 required: true
 translatable: false
@@ -26,11 +26,11 @@ settings:
   max_resolution: ''
   min_resolution: ''
   alt_field: true
-  alt_field_required: true
+  alt_field_required: false
   title_field: false
   title_field_required: false
   default_image:
-    uuid: ''
+    uuid: c84001ae-ece4-4b79-9161-2a6cf0652eea
     alt: ''
     title: ''
     width: 250
